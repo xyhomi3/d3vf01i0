@@ -102,7 +102,7 @@ export const navMenu = [
     ]
   },
   {
-    name: '_pr0jects',
+    name: '_pr0j3cts',
     child: [
       {
         name: 'All Projects',

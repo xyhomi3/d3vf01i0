@@ -5,8 +5,8 @@ import { FadeIn, FadeInStagger } from '@/components/atoms/fade-in'
 import { AsideLink } from '@/components/atoms/aside-link'
 import { ENV } from '@/lib/constants'
 import { FaRegEnvelope } from 'react-icons/fa'
+import { LuTwitter } from 'react-icons/lu'
 import { Suspense } from 'react'
-import { TbBrandUpwork } from 'react-icons/tb'
 import { generateSEO } from '@/lib/generateSEO'
 
 const title = 'guest-book'
@@ -56,14 +56,8 @@ const data = [
     list: [
       {
         title: 'Email',
-        href: 'mailto:lucien.loua@gmail.com',
+        href: 'mailto:loua@0000.codes',
         icon: <FaRegEnvelope className='w-4 h-4' />
-      },
-
-      {
-        title: 'X',
-        href: 'https://wa.me/+6287885002327',
-        icon: <BsWhatsapp className='w-4 h-4' />
       },
       {
         title: 'LinkedIn',
@@ -71,9 +65,9 @@ const data = [
         icon: <BsLinkedin className='w-4 h-4' />
       },
       {
-        title: 'X',
+        title: 'Twitter',
         href: 'https://www.instagram.com/xyhomi3/',
-        icon: <BsX className='w-4 h-4' />
+        icon: <LuTwitter className='w-4 h-4' />
       }
     ]
   }

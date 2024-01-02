@@ -1,6 +1,8 @@
-# D3vf01i0 Homepage
+# |>_ h3110 w0r1d
 
-[0000.codes](https://0000.codes)
+![ok](/public/readme.svg)
+
+Link to [0000.codes](https://0000.codes)
 
 ## Stack
 

@@ -4,13 +4,24 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/xyhomi3/d3vf01i0.git"},
+    "url": "https://github.com/xyhomi3/d3vf01i0.git"
+  },
+  "homepage": "https://0000.codes",
+  "author": "Wiscaksono <wwicaksono96@gmail.com>",
+  "contributors": [
+    "1uci3n 10ua <loua@0000.codes>"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "postinstall": "prisma generate"
+  },
+  "overrides": {
+    "next-contentlayer": {
+      "next": "$next"
+    }
   },
   "dependencies": {
     "@auth/prisma-adapter": "^1.0.12",
@@ -25,6 +36,7 @@
     "@radix-ui/react-tooltip": "^1.0.7",
     "@vercel/analytics": "^1.1.1",
     "@vercel/og": "^0.5.20",
+    "@vercel/postgres": "^0.5.1",
     "@vercel/speed-insights": "^1.0.2",
     "autoprefixer": "10.4.16",
     "class-variance-authority": "^0.7.0",
@@ -34,11 +46,10 @@
     "geist": "^1.2.0",
     "lucide-react": "^0.292.0",
     "next": "^14.0.4",
-    "next-auth": "^4.24.5",
+    "next-auth": "^5.0.0-beta.4",
     "next-contentlayer": "^0.3.4",
     "next-themes": "^0.2.1",
     "postcss": "8.4.31",
-    "postcss-nesting": "^12.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",
@@ -57,6 +68,7 @@
     "@types/react-dom": "18.2.15",
     "eslint": "8.53.0",
     "eslint-config-next": "14.0.1",
+    "postcss-nesting": "^12.0.2",
     "prisma": "^5.7.1",
     "tailwind-merge": "^2.2.0",
     "tailwindcss": "3.4.0",

@@ -1,12 +1,13 @@
 'use client'
-import { useState } from 'react'
+
 import { Loader2, X } from 'lucide-react'
-import { signIn } from 'next-auth/react'
-import { useFormStatus } from 'react-dom'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/atoms/tooltip'
 
 import { Button } from '@/components/atoms/button'
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/atoms/tooltip'
 import { deletePost } from '@/lib/actions'
+import { signIn } from 'next-auth/react'
+import { useFormStatus } from 'react-dom'
+import { useState } from 'react'
 
 export const SignInBtn = () => {
   return (

@@ -9,7 +9,6 @@ import { GeistSans } from 'geist/font/sans'
 import { Metadata } from 'next'
 import { Navbar } from '@/components/organisms/navbar'
 import { ResponsiveIndicator } from '@/components/atoms/responsive-indicator'
-import Script from 'next/script'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { ThemeWrapper } from '@/components/atoms/theme-wrapper'
 
@@ -69,7 +68,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </ThemeWrapper>
         {process.env.NODE_ENV === 'production' && (
           <>
-            <Script async src='https://umami.wiscaksono.com/script.js' data-website-id='1f3b0505-7366-47bd-8757-95ad25395088' />
+
             <SpeedInsights />
           </>
         )}

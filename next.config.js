@@ -4,11 +4,6 @@ const { withContentlayer } = require('next-contentlayer')
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
-  // plugins: [
-  //   require('postcss-nesting'),
-  //   require('tailwindcss'),
-  //   require('autoprefixer'),
-  // ],
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
   experimental: {
     webpackBuildWorker: true,

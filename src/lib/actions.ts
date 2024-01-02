@@ -2,7 +2,7 @@
 
 import * as Wakatime from '@/types/wakatimeResponse'
 
-import {auth} from './auth'
+import { auth } from './auth'
 import { db } from './prisma'
 import { revalidatePath } from 'next/cache'
 
@@ -29,7 +29,6 @@ export const deletePost = async (id: number) => {
 
   revalidatePath('/guest-book')
 }
-
 export const weeklyCodingActivity = async () => {
   const res = await fetch('https://wakatime.com/share/@xyhomi3/0a7fc3fe-495b-4963-9c5f-df0c2b893782.json', {
     cache: 'no-store'
