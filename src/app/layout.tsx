@@ -22,11 +22,11 @@ export const metadata: Metadata = {
     icon: '/favicon.svg',
   },
   description:
-    "Explore my interactive devfolio, and a glimpse into my technical expertise. If you're seeking a Ux/Ui developer for your next project, feel free to get in touch!",
+    "Explore my interactive Devfolio to get a glimpse of my technical expertise. If you're looking for a UX/UI developer for your next project, feel free to get in touch!",
   openGraph: {
     title: 'D3vfo1io | 1ucien 1oua',
     description:
-    "Explore my interactive devfolio, and a glimpse into my technical expertise. If you're seeking a Ux/Ui developer for your next project, feel free to get in touch!",
+    "Explore my interactive Devfolio to get a glimpse of my technical expertise. If you're looking for a UX/UI developer for your next project, feel free to get in touch!",
     url: ENV.NEXT_PUBLIC_WEBSITE_URL,
     siteName: 'Devfolio',
     locale: 'en_EN',
