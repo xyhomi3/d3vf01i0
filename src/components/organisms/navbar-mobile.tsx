@@ -159,20 +159,12 @@ export const navMenu = [
         path: 'mailto:loua@0000.codes'
       },
       {
-        name: 'Upwork',
-        path: 'https://www.upwork.com/freelancers/~01df34d78e05fa69bf'
-      },
-      {
-        name: 'WhatsApp',
-        path: 'https://wa.me/+6287885002327'
-      },
-      {
         name: 'LinkedIn',
-        path: 'https://www.linkedin.com/in/wiscaksono/'
+        path: 'https://www.linkedin.com/in/lucien-loua/'
       },
       {
-        name: 'Instagram',
-        path: 'https://www.instagram.com/amachoker/'
+        name: 'X',
+        path: 'https://www.x.com/xyhomi3/'
       }
     ]
   }

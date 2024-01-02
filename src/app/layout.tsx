@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     icon: '/favicon.svg',
   },
   description:
-    "Get to know me, 1uci3n 1oua, through this devfolio! I'm a passionate Ux/Ui developer and sound designer. Explore my interactive projects, clean portfolio, and a glimpse into my technical expertise. If you're seeking a Ux/Ui developer for your next project or simply looking for inspiration, feel free to get in touch!",
+    "Explore my interactive devfolio, and a glimpse into my technical expertise. If you're seeking a Ux/Ui developer for your next project, feel free to get in touch!",
   openGraph: {
-    title: 'D3vfo1io',
+    title: 'D3vfo1io | 1ucien 1oua',
     description:
-      "Get to know me, 1uci3n 1oua, through this devfolio! I'm a passionate Ux/Ui developer and sound designer. Explore my interactive projects, clean portfolio, and a glimpse into my technical expertise. If you're seeking a Ux/Ui developer for your next project or simply looking for inspiration, feel free to get in touch!",
+    "Explore my interactive devfolio, and a glimpse into my technical expertise. If you're seeking a Ux/Ui developer for your next project, feel free to get in touch!",
     url: ENV.NEXT_PUBLIC_WEBSITE_URL,
-    siteName: 'D3vfo1io',
-    locale: 'fr_FR',
+    siteName: 'Devfolio',
+    locale: 'en_EN',
     type: 'website'
   },
   robots: {
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     }
   },
   twitter: {
-    title: 'D3vfo1io',
+    title: 'D3vfo1io | 1ucien 1oua',
     card: 'summary_large_image'
   },
   verification: {
@@ -67,10 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </main>
         </ThemeWrapper>
         {process.env.NODE_ENV === 'production' && (
-          <>
-
             <SpeedInsights />
-          </>
         )}
       </body>
       <ResponsiveIndicator />
