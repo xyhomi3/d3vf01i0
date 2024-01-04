@@ -1,7 +1,8 @@
 'use client'
+
 import Link from 'next/link'
-import { useSelectedLayoutSegment } from 'next/navigation'
 import { cn } from '@/lib/utils'
+import { useSelectedLayoutSegment } from 'next/navigation'
 
 type Props = {
   href: string
@@ -19,7 +20,7 @@ export const NavLink = ({ href, children }: Props) => {
       </Link>
       <div
         className={cn(
-          'absolute bottom-0 h-0.5 bg-muted-foreground opacity-0 transition-all duration-500',
+          'absolute bottom-0 h-0.5 bg-muted-foreground opacity-0 transition-all duration-300',
           'group-hover:opacity-100 group-hover:w-full',
           isActive ? 'opacity-100 w-full' : 'w-0'
         )}

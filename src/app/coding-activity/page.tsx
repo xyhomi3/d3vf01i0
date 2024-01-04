@@ -1,5 +1,4 @@
-import { Languages } from './partials'
-
+import { Activity } from './partials'
 export default async function CodingActivity() {
-  return <Languages />
+  return <Activity />
 }

@@ -1,17 +1,16 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/atoms/accordion'
 import { FadeIn, FadeInStagger } from '@/components/atoms/fade-in'
-import { RiHtml5Fill, RiReactjsLine } from 'react-icons/ri'
+import { SiJavascript, SiNextdotjs, SiReact, SiSass, SiTypescript, SiVite } from 'react-icons/si'
 
 import { AsideLink } from '@/components/atoms/aside-link'
 import { ENV } from '@/lib/constants'
 import { HiTerminal } from 'react-icons/hi'
 import { Suspense } from 'react'
-import { TbBrandNextjs } from 'react-icons/tb'
 import { generateSEO } from '@/lib/generateSEO'
 
 const title = 'Projects'
 const description =
-  'Discover the interactive brilliance of my projects, peruse my polished portfolio, and delve into a sneak peek of my formidable technical prowess. Uncover a world where innovation meets functionality, showcased through a meticulously crafted Next.js application. Elevate your digital experience with a seamless blend of creativity and technical finesse.'
+  'Elevate your digital experience with a seamless blend of creativity and technical finesse.'
 const url = `${ENV.NEXT_PUBLIC_WEBSITE_URL}/projects`
 const image = `${ENV.NEXT_PUBLIC_WEBSITE_URL}/api/og?title=${title}`
 
@@ -62,18 +61,28 @@ const data = [
       {
         title: 'React',
         href: '/projects?tag=React',
-        icon: <RiReactjsLine className='w-4 h-4' />
+        icon: <SiReact className='w-4 h-4' />
       },
       {
         title: 'Next',
         href: '/projects?tag=Next',
-        icon: <TbBrandNextjs className='w-4 h-4' />
+        icon: <SiNextdotjs className='w-4 h-4' />
       },
       {
-        title: 'HTML',
-        href: '/projects?tag=HTML',
-        icon: <RiHtml5Fill className='w-4 h-4' />
-      }
+        title: 'Vite',
+        href: '/projects?tag=Vite',
+        icon: <SiVite className='w-4 h-4' />
+      },
+      {
+        title: 'JavaScript',
+        href: '/projects?tag=Js',
+        icon: <SiJavascript className='w-4 h-4' />
+      },
+      {
+        title: 'TypeScript',
+        href: '/projects?tag=Ts',
+        icon: <SiTypescript className='w-4 h-4' />
+      },
     ]
   }
 ]

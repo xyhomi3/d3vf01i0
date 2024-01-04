@@ -1,7 +1,10 @@
-import { RemoveBtn, SendBtn, SignInBtn } from './action-buttons'
+import { RemoveBtn, SendBtn } from './action-buttons'
 
+import { Button } from '@/components/atoms/button'
 import { FadeIn } from '@/components/atoms/fade-in'
 import { Input } from '@/components/atoms/input'
+import { LoginButton } from '@/components/molecules/auth/login-button'
+import { LogoutButton } from '@/components/molecules/auth/logout-button'
 import { auth } from '@/lib/auth'
 import { createPost } from '@/lib/actions'
 import { db } from '@/lib/prisma'
@@ -21,11 +24,18 @@ export default async function GuestBooks() {
     <FadeIn className='p-5 space-y-2'>
       <form action={createPost} className='col-span-full flex items-center justify-between gap-x-2.5'>
         <div className='flex-1 relative'>
-          <Input name='desc' id='desc' placeholder='This is really cool!' aria-labelledby='desc' />
+          <Input name='desc' id='desc' placeholder='Your Message...' aria-labelledby='desc' />
         </div>
-        {!session ? <SignInBtn /> : <SendBtn />}
-      </form>
 
+        {!session ? (
+          <LoginButton asChild mode='modal'>
+            <Button variant='secondary'>Sign in</Button>
+          </LoginButton>
+        ) : (
+          <SendBtn />
+        )}
+        {!session ? '' : <LogoutButton />}
+      </form>
       <article className='divide-y lg:divide-y-0'>
         {posts.map((item, i) => (
           <pre className='flex lg:flex-row flex-col items-start gap-x-2 py-2 lg:py-0 md:!text-sm text-xs' key={i}>

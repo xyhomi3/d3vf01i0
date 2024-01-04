@@ -1,8 +1,8 @@
 import { DefaultSession } from 'next-auth'
 import { ENV } from './constants'
-import GitHub from 'next-auth/providers/github'
 import NextAuth from 'next-auth'
 import { PrismaAdapter } from '@auth/prisma-adapter'
+import authConfig from '@/auth.config'
 import { db } from './prisma'
 
 declare module 'next-auth' {
@@ -19,12 +19,6 @@ export const {
 } = NextAuth({
   secret: ENV.AUTH_SECRET,
   adapter: PrismaAdapter(db),
-  providers: [
-    GitHub({
-      clientId: ENV.GITHUB_CLIENT_ID,
-      clientSecret: ENV.GITHUB_CLIENT_SECRET
-    })
-  ],
   callbacks: {
     session: ({ session, user }) => ({
       ...session,
@@ -35,6 +29,8 @@ export const {
     })
   },
   pages: {
-    error: '/'
-  }
+    signIn: '/auth/login',
+    error: '/auth/error'
+  },
+  ...authConfig
 })

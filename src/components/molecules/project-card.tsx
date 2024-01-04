@@ -33,7 +33,7 @@ export const ProjectCard = ({ data }: { data: Projects }) => {
           </div>
         </article>
       </DialogTrigger>
-      <DialogContent className='shadow-2xl shadow-secondary max-w-2xl'>
+      <DialogContent className='shadow-2xl shadow-secondary max-w-2xl min-w-[280px]'>
         <DialogHeader>
           <DialogTitle className='mb-2'>{data.title}</DialogTitle>
           <DialogDescription>

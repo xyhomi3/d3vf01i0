@@ -2,6 +2,7 @@ import './globals.css'
 
 import { NavbarMobile, NavbarProvider } from '@/components/organisms/navbar-mobile'
 
+import { Analytics } from '@vercel/analytics/react';
 import { ENV } from '@/lib/constants'
 import { Footer } from '@/components/organisms/footer'
 import { GeistMono } from 'geist/font/mono'
@@ -11,7 +12,18 @@ import { Navbar } from '@/components/organisms/navbar'
 import { ResponsiveIndicator } from '@/components/atoms/responsive-indicator'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { ThemeWrapper } from '@/components/atoms/theme-wrapper'
+import type { Viewport } from 'next'
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: true,
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#fffcf7' },
+    { media: '(prefers-color-scheme: dark)', color: '#00000c' }
+  ]
+}
 export const metadata: Metadata = {
   metadataBase: new URL(ENV.NEXT_PUBLIC_WEBSITE_URL),
   title: {
@@ -19,14 +31,25 @@ export const metadata: Metadata = {
     template: '%s | D3vf01i0'
   },
   icons: {
-    icon: '/favicon.svg',
+    icon: ['/favicons/favicon.ico'],
+    shortcut: '/favicons/favicon.ico',
+    apple: '/favicons/apple-touch-icon.png'
+  },
+  referrer: 'origin-when-cross-origin',
+  keywords: ['Ux', 'Ui', 'Developer', 'Web', 'Designer', 'Guinea', 'Senegal', 'JavaScript', 'TypeScript', 'Web3', 'Solana', 'Bitcoin', 'Finance'],
+  category: 'portfolio',
+  appLinks: {
+    web: {
+      url: 'https://0000.codes',
+      should_fallback: true
+    }
   },
   description:
     "Explore my interactive Devfolio to get a glimpse of my technical expertise. If you're looking for a UX/UI developer for your next project, feel free to get in touch!",
   openGraph: {
     title: 'D3vfo1io | 1ucien 1oua',
     description:
-    "Explore my interactive Devfolio to get a glimpse of my technical expertise. If you're looking for a UX/UI developer for your next project, feel free to get in touch!",
+      "Explore my interactive Devfolio to get a glimpse of my technical expertise. If you're looking for a UX/UI developer for your next project, feel free to get in touch!",
     url: ENV.NEXT_PUBLIC_WEBSITE_URL,
     siteName: 'Devfolio',
     locale: 'en_EN',
@@ -54,7 +77,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang='fr' suppressHydrationWarning>
+    <html lang='en' suppressHydrationWarning>
       <body className={`${GeistSans.variable} ${GeistMono.variable} font-mono`}>
         <ThemeWrapper attribute='class' defaultTheme='system' enableSystem disableTransitionOnChange>
           <main>
@@ -66,9 +89,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Footer />
           </main>
         </ThemeWrapper>
-        {process.env.NODE_ENV === 'production' && (
-            <SpeedInsights />
-        )}
+        {process.env.NODE_ENV === 'production' && <SpeedInsights /> && <Analytics/>}
       </body>
       <ResponsiveIndicator />
     </html>

@@ -1,12 +1,14 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/atoms/accordion'
-import { BsInstagram, BsLinkedin, BsWhatsapp, BsX } from 'react-icons/bs'
 import { FadeIn, FadeInStagger } from '@/components/atoms/fade-in'
 
 import { AsideLink } from '@/components/atoms/aside-link'
+import { BsLinkedin } from 'react-icons/bs'
 import { ENV } from '@/lib/constants'
 import { FaRegEnvelope } from 'react-icons/fa'
 import { LuTwitter } from 'react-icons/lu'
+import { SessionProvider } from 'next-auth/react'
 import { Suspense } from 'react'
+import { auth } from '@/lib/auth'
 import { generateSEO } from '@/lib/generateSEO'
 
 const title = 'guest-book'
@@ -17,8 +19,11 @@ const image = `${ENV.NEXT_PUBLIC_WEBSITE_URL}/api/og?title=${title}`
 
 export const metadata = generateSEO(title, description, image, url)
 
-export default function AboutLayout({ children }: { children: React.ReactNode }) {
+export default async function AboutLayout({ children }: { children: React.ReactNode }) {
+  const session = await auth()
+
   return (
+    <SessionProvider session={session}>
     <section className='grid grid-cols-12 overflow-hidden'>
       <aside className='md:col-span-3 lg:col-span-2 border-r border-lines md:block hidden overflow-y-auto'>
         <Accordion type='single' collapsible defaultValue='item-0'>
@@ -45,8 +50,11 @@ export default function AboutLayout({ children }: { children: React.ReactNode })
           ))}
         </Accordion>
       </aside>
-      <section className='md:col-span-9 lg:col-span-10 col-span-12 overflow-y-auto relative h-[84dvh] md:h-auto'>{children}</section>
+      
+        <section className='md:col-span-9 lg:col-span-10 col-span-12 overflow-y-auto relative h-[84dvh] md:h-auto'>{children}</section>
+      
     </section>
+    </SessionProvider>
   )
 }
 

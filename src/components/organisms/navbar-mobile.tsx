@@ -3,9 +3,10 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/atoms/accordion'
 import { AnimatePresence, FadeIn } from '@/components/atoms/fade-in'
 import { Fragment, createContext, useContext, useState } from 'react'
+import { Menu, X } from 'lucide-react'
 
 import Link from 'next/link'
-import { Menu } from 'lucide-react'
+import { ThemeToggle } from '../molecules/theme-toggler'
 
 interface NavbarMobileContextProps {
   isOpen: boolean
@@ -33,12 +34,14 @@ export const useNavbarMobile = (): NavbarMobileContextProps => {
 }
 
 export const NavbarMobileBtn: React.FC = () => {
-  const { toggleNavbar } = useNavbarMobile()
+  const { isOpen, toggleNavbar } = useNavbarMobile()
 
   return (
-    <button className='text-muted-foreground ml-auto px-2.5 block md:hidden' onClick={toggleNavbar} data-umami-event='navbar-mobile-trigger'>
-      <Menu />
+    <>
+    <button className='text-muted-foreground ml-auto px-2.5 block lg:hidden' onClick={() => toggleNavbar()} data-umami-event='navbar-mobile-trigger'>
+       {isOpen ? <X /> : <Menu />}
     </button>
+    </>
   )
 }
 
@@ -48,7 +51,7 @@ export const NavbarMobile = () => {
   return (
     <AnimatePresence>
       {isOpen && (
-        <FadeIn fromTopToBottom className='absolute top-[57px] left-0 bg-background h-[calc(100%-57px-27px)] w-full z-50 p-5 divide-y overflow-y-auto'>
+        <FadeIn className='absolute top-[57px] left-0 bg-background h-[calc(100%-57px-27px)] w-full z-40 p-5 divide-y overflow-y-auto'>
           {navMenu.map((menu, i) => (
             <Fragment key={i}>
               {menu.child ? (
