@@ -38,7 +38,7 @@ export const NavbarMobileBtn: React.FC = () => {
 
   return (
     <>
-    <button className='text-muted-foreground ml-auto px-2.5 block lg:hidden' onClick={() => toggleNavbar()} data-umami-event='navbar-mobile-trigger'>
+    <button className='text-muted-foreground ml-auto px-2.5 block lg:hidden' onClick={() => toggleNavbar()} data-umami-event='navbar-mobile-trigger' title='navbar-mobile-trigger' aria-label='navbar-mobile-trigger'>
        {isOpen ? <X /> : <Menu />}
     </button>
     </>
