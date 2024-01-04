@@ -29,4 +29,4 @@ Create a .env file similar to .env.example.
 
 ## Cloning / Forking
 
-Please review the [license](LICENCE) and remove all of my personal content.
+Please review the [license](LICENSE) and remove all of my personal content.
