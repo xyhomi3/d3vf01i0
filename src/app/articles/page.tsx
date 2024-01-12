@@ -27,7 +27,7 @@ export default function Articles({ searchParams }: SearchParamsProps) {
   let filteredArticles = tag ? allArticles.filter(articles => articles.tag.includes(tag)) : allArticles
 
   return (
-    <FadeInStagger className='grid md:grid-cols-2 gap-5 p-5' faster>
+    <FadeInStagger className='grid lg:grid-cols-2 gap-5 p-5' faster>
       <AnimatePresence mode='wait'>
         {filteredArticles.map(articles => (
           <FadeIn layout key={articles.title} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}>

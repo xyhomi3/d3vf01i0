@@ -40,7 +40,7 @@ export default async function GuestBooks() {
         {posts.map((item, i) => (
           <pre className='flex lg:flex-row flex-col items-start gap-x-2 py-2 lg:py-0 md:!text-sm text-xs' key={i}>
             <code className='text-muted-foreground lg:w-36 truncate shrink-0 flex items-center justify-between w-full gap-x-2'>
-              {item.user.name}
+            <code className='transition-colors font-semibold bg-gradient-to-r to-[#00bef0]  from-primary bg-clip-text text-transparent'>{item.user.name}</code>
               <code className='text-muted-foreground shrink-0 flex items-center justify-center gap-x-2 lg:hidden'>
                 {session?.user?.id === item.user.id && <RemoveBtn id={item.id} />}
                 <code>

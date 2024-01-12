@@ -1,14 +1,14 @@
 import './globals.css'
 
-import { NavbarMobile, NavbarProvider } from '@/components/organisms/navbar-mobile'
+import { NavbarMobile, NavbarProvider } from '@/components/organisms/layouts/navbar/navbar-mobile'
 
 import { Analytics } from '@vercel/analytics/react';
 import { ENV } from '@/lib/constants'
-import { Footer } from '@/components/organisms/footer'
+import { Footer } from '@/components/organisms/layouts/footer/footer'
 import { GeistMono } from 'geist/font/mono'
 import { GeistSans } from 'geist/font/sans'
 import { Metadata } from 'next'
-import { Navbar } from '@/components/organisms/navbar'
+import { Navbar } from '@/components/organisms/layouts/navbar/navbar'
 import { ResponsiveIndicator } from '@/components/atoms/responsive-indicator'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { ThemeWrapper } from '@/components/atoms/theme-wrapper'

@@ -1,11 +1,9 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/atoms/accordion'
 import { FadeIn, FadeInStagger } from '@/components/atoms/fade-in'
+import { SiLinkedin, SiMailgun, SiX } from 'react-icons/si'
 
 import { AsideLink } from '@/components/atoms/aside-link'
-import { BsLinkedin } from 'react-icons/bs'
 import { ENV } from '@/lib/constants'
-import { FaRegEnvelope } from 'react-icons/fa'
-import { LuTwitter } from 'react-icons/lu'
 import { SessionProvider } from 'next-auth/react'
 import { Suspense } from 'react'
 import { auth } from '@/lib/auth'
@@ -65,17 +63,17 @@ const data = [
       {
         title: 'Email',
         href: 'mailto:loua@0000.codes',
-        icon: <FaRegEnvelope className='w-4 h-4' />
+        icon: <SiMailgun className='w-4 h-4' />
       },
       {
         title: 'LinkedIn',
         href: 'https://www.linkedin.com/in/lucien-loua',
-        icon: <BsLinkedin className='w-4 h-4' />
+        icon: <SiLinkedin className='w-4 h-4' />
       },
       {
         title: 'Twitter',
         href: 'https://www.instagram.com/xyhomi3/',
-        icon: <LuTwitter className='w-4 h-4' />
+        icon: <SiX className='w-4 h-4' />
       }
     ]
   }

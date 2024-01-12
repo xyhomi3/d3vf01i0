@@ -4,7 +4,8 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 
 import { AiOutlineClockCircle } from 'react-icons/ai'
 import Link from 'next/link'
-import { ThemeToggle } from '../molecules/theme-toggler'
+import LocalTime from './local-time'
+import { ThemeToggle } from '../../../molecules/theme/theme-toggler'
 import { weeklyCodingActivity } from '@/lib/actions'
 
 export const Footer = async () => {
@@ -68,12 +69,7 @@ export const Footer = async () => {
       </div>
 
       <div className='flex items-center divide-x divide border-l'>
-        <div className='items-center gap-x-2 px-2 py-1 h-7 md:flex hidden text-muted-foreground'>
-          <p className='transition-colors bg-gradient-to-r via-[#00bef0] to-[#c7f284] from-primary bg-clip-text text-transparent'>Special thanks to:</p>
-          <Link href='https://github.com/wiscaksono' target='_blank' className=' hover:text-foreground transition-colors'>
-            wiscaksono
-          </Link>
-        </div>
+        <LocalTime />
         <Link target='_blank' href='https://github.com/xyhomi3' className='flex items-center gap-x-1 px-2 py-1 h-7 hover:text-foreground text-muted-foreground transition-colors'>
           <p>xyhomi3</p>
           <IoLogoGithub className='text-lg' />

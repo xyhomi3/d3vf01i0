@@ -1,9 +1,8 @@
-import Image from 'next/image'
-import { useMDXComponent } from 'next-contentlayer/hooks'
 import { ClassValue } from 'clsx'
-
 import { FadeIn } from '@/components/atoms/fade-in'
+import Image from 'next/image'
 import { cn } from '@/lib/utils'
+import { useMDXComponent } from 'next-contentlayer/hooks'
 
 const components = {
   Image

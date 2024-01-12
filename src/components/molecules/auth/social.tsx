@@ -4,17 +4,33 @@ import { Button } from "@/components/atoms/button";
 import { DEFAULT_LOGIN_REDIRECT } from "@/routes";
 import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
+import { Loader2 } from 'lucide-react';
 import { signIn } from "next-auth/react";
 import { useSearchParams } from "next/navigation";
+import { useState } from 'react';
 
 export const Social = () => {
   const searchParams = useSearchParams();
   const callbackUrl = searchParams.get("callbackUrl");
+  const [isGoogleLoading, setIsGoogleLoading] = useState(false);
+  const [isGithubLoading, setIsGithubLoading] = useState(false);
 
-  const onClick = (provider: "google" | "github") => {
-    signIn(provider, {
+  const onClick = async (provider: "google" | "github") => {
+    if (provider === "google") {
+      setIsGoogleLoading(true);
+    } else {
+      setIsGithubLoading(true);
+    }
+
+    await signIn(provider, {
       callbackUrl: callbackUrl || DEFAULT_LOGIN_REDIRECT,
     });
+
+    if (provider === "google") {
+      setIsGoogleLoading(false);
+    } else {
+      setIsGithubLoading(false);
+    }
   }
 
   return (
@@ -23,15 +39,17 @@ export const Social = () => {
         className="w-full"
         variant="outline"
         onClick={() => onClick("google")}
+        disabled={isGoogleLoading}
       >
-        <FcGoogle className="h-5 w-5" />
+        {isGoogleLoading ? <Loader2 size={15} className='animate-spin text-muted-foreground transition-all' /> : <FcGoogle className="h-5 w-5" />}
       </Button>
       <Button
         className="w-full"
         variant="outline"
         onClick={() => onClick("github")}
+        disabled={isGithubLoading}
       >
-        <FaGithub className="h-5 w-5" />
+        {isGithubLoading ? <Loader2 size={15} className='animate-spin text-muted-foreground transition-all' /> : <FaGithub className="h-5 w-5" />}
       </Button>
     </div>
   );

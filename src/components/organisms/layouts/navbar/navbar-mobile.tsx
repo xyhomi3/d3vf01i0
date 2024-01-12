@@ -6,7 +6,7 @@ import { Fragment, createContext, useContext, useState } from 'react'
 import { Menu, X } from 'lucide-react'
 
 import Link from 'next/link'
-import { ThemeToggle } from '../molecules/theme-toggler'
+import { ThemeToggle } from '../../../molecules/theme/theme-toggler'
 
 interface NavbarMobileContextProps {
   isOpen: boolean

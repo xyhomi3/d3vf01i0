@@ -1,8 +1,7 @@
-import { redirect } from 'next/navigation'
-
 import { ENV } from '@/lib/constants'
-import { generateSEO } from '@/lib/generateSEO'
 import { allActivity } from '../allActivities'
+import { generateSEO } from '@/lib/generateSEO'
+import { redirect } from 'next/navigation'
 
 type ParamsProps = {
   slug: string
@@ -12,7 +11,7 @@ export async function generateMetadata({ params }: { params: ParamsProps }) {
   const data = allActivity.find(component => component.slug === params.slug)
   if (!data) return {}
 
-  const title = data.slug + ' | Wiscaksono'
+  const title = data.slug + ' | D3vf01i0'
   const description = data.desc
   const image = `${ENV.NEXT_PUBLIC_WEBSITE_URL}/api/og?title=${title.split(' ')[0]}`
 

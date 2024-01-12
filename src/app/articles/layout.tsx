@@ -2,11 +2,9 @@
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/atoms/accordion'
 import { FadeIn, FadeInStagger } from '@/components/atoms/fade-in'
+import { SiAtom, SiBitcoin, SiMdbook, SiMusicbrainz, SiOpenaccess, SiReact, SiReadme } from 'react-icons/si';
 
 import { AsideLink } from '@/components/atoms/aside-link'
-import { LuBook } from "react-icons/lu";
-import { LuNewspaper } from 'react-icons/lu'
-import { RiReactjsLine } from 'react-icons/ri'
 import { Suspense } from 'react'
 import { useParams } from 'next/navigation'
 
@@ -53,17 +51,27 @@ const TAGS = [
       {
         title: 'All article',
         href: '/articles',
-        icon: LuNewspaper
+        icon: SiMdbook
       },
       {
-        title: 'React',
-        href: '/articles?tag=React',
-        icon: RiReactjsLine
+        title: 'Music',
+        href: '/articles?tag=react',
+        icon: SiMusicbrainz
       },
       {
-        title: 'Non Technical',
-        href: '/articles?tag=Non Technical',
-        icon: LuBook
+        title: 'Open Source',
+        href: '/articles?tag=op',
+        icon: SiOpenaccess
+      },
+      {
+        title: 'Cryptos',
+        href: '/articles?tag=cryptos',
+        icon: SiBitcoin
+      },
+      {
+        title: 'Life',
+        href: '/articles?tag=life',
+        icon: SiAtom
       }
     ]
   }

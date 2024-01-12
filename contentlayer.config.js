@@ -107,7 +107,7 @@ const Articles = defineDocumentType(() => ({
 const rehypePrettyOptions = {
   theme: {
     dark: 'github-dark-dimmed',
-    light: 'github-light'
+    light: 'min-light'
   },
   keepBackground: true
 }
