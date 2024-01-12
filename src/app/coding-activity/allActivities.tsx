@@ -6,7 +6,7 @@ export const allActivity = [
   {
     title: 'Activity',
     desc: 'Uncover the dynamics of my coding activity with a breakdown of dedicated work hours and insightful metrics. Track my progress and delve into the quantitative side of my coding endeavors.',
-    slug: '',
+    slug: ' ',
     component: Part.Activity,
     icon: SiCodeium
   },
