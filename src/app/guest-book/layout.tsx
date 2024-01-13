@@ -3,7 +3,7 @@ import { FadeIn, FadeInStagger } from '@/components/atoms/fade-in'
 import { SiLinkedin, SiMailgun, SiX } from 'react-icons/si'
 
 import { AsideLink } from '@/components/atoms/aside-link'
-import { ENV } from '@/lib/constants'
+import { ENV } from '@/lib/env/constants'
 import { SessionProvider } from 'next-auth/react'
 import { Suspense } from 'react'
 import { auth } from '@/lib/auth'
@@ -48,9 +48,7 @@ export default async function AboutLayout({ children }: { children: React.ReactN
           ))}
         </Accordion>
       </aside>
-      
         <section className='md:col-span-9 lg:col-span-10 col-span-12 overflow-y-auto relative h-[84dvh] md:h-auto'>{children}</section>
-      
     </section>
     </SessionProvider>
   )

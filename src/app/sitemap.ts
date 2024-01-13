@@ -1,10 +1,9 @@
+import { ENV } from '@/lib/env/constants'
 import { MetadataRoute } from 'next'
 import { allAbouts } from 'contentlayer/generated'
-import { allProjects } from 'contentlayer/generated'
 import { allActivity } from './coding-activity/allActivities'
 import { allArticles } from 'contentlayer/generated'
-
-import { ENV } from '@/lib/constants'
+import { allProjects } from 'contentlayer/generated'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const WEBSITE_URL = ENV.NEXT_PUBLIC_WEBSITE_URL

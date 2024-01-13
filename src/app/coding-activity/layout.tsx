@@ -1,12 +1,11 @@
-import { Suspense } from 'react'
-
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/atoms/accordion'
-import { AsideLink } from '@/components/atoms/aside-link'
-import { FadeInStagger, FadeIn } from '@/components/atoms/fade-in'
-import { ENV } from '@/lib/constants'
-import { generateSEO } from '@/lib/generateSEO'
+import { FadeIn, FadeInStagger } from '@/components/atoms/fade-in'
 
+import { AsideLink } from '@/components/atoms/aside-link'
+import { ENV } from '@/lib/env/constants'
+import { Suspense } from 'react'
 import { allActivity } from './allActivities'
+import { generateSEO } from '@/lib/generateSEO'
 
 const title = 'coding-activity'
 const description =

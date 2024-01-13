@@ -69,7 +69,8 @@ export const Footer = async () => {
       </div>
 
       <div className='flex items-center divide-x divide border-l'>
-        <LocalTime />
+
+        <LocalTime/>
         <Link target='_blank' href='https://github.com/xyhomi3' className='flex items-center gap-x-1 px-2 py-1 h-7 hover:text-foreground text-muted-foreground transition-colors'>
           <p>xyhomi3</p>
           <IoLogoGithub className='text-lg' />

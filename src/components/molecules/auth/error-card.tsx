@@ -1,10 +1,8 @@
-import { Card, CardContent, CardFooter, CardHeader } from '@/components/atoms/card'
+import { Card, CardContent, CardHeader } from '@/components/atoms/card'
 
 import { AlertTriangle } from 'lucide-react'
-import { BackButton } from '@/components/atoms/back-button'
 import { Button } from '@/components/atoms/button'
-import { LoginButton } from './login-button'
-import { LuStopCircle } from 'react-icons/lu'
+import { SignIn } from './signin'
 
 export const ErrorCard = () => {
   return (
@@ -14,11 +12,10 @@ export const ErrorCard = () => {
       </CardHeader>
 
       <CardContent className='flex w- items-center justify-center p-3'>
-        <LoginButton mode='redirect' asChild>
+        <SignIn mode='redirect' asChild>
           <Button variant='secondary'>Try again</Button>
-        </LoginButton>
+        </SignIn>
       </CardContent>
-      
     </Card>
   )
 }

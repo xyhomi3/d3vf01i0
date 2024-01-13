@@ -1,4 +1,4 @@
-import { ENV } from '@/lib/constants'
+import { ENV } from '@/lib/env/constants'
 import { allActivity } from '../allActivities'
 import { generateSEO } from '@/lib/generateSEO'
 import { redirect } from 'next/navigation'

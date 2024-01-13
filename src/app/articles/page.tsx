@@ -3,7 +3,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 
 import { Badge } from '@/components/atoms/badge'
 import { Button } from '@/components/atoms/button'
-import { ENV } from '@/lib/constants'
+import { ENV } from '@/lib/env/constants'
 import Link from 'next/link'
 import { allArticles } from 'contentlayer/generated'
 import { generateSEO } from '@/lib/generateSEO'
@@ -47,7 +47,7 @@ export default function Articles({ searchParams }: SearchParamsProps) {
                   <div className='flex items-center gap-x-1'>
                     <p className='text-sm text-muted-foreground'>Tags: </p>
                     {articles.tag.map((tag, index) => (
-                      <Badge className='bg-gradient-to-r via-[#00bef0] to-[#c7f284] from-primary bg-clip-text text-transparent' key={index}>{tag}</Badge>
+                      <Badge className='bg-gradient-to-r to-[#00bef0] from-primary bg-clip-text text-transparent' key={index}>{tag}</Badge>
                     ))}
                   </div>
                 </div>

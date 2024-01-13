@@ -3,7 +3,7 @@ import { FadeIn, FadeInStagger } from '@/components/atoms/fade-in'
 import { SiJavascript, SiNextdotjs, SiReact, SiSass, SiTypescript, SiVite } from 'react-icons/si'
 
 import { AsideLink } from '@/components/atoms/aside-link'
-import { ENV } from '@/lib/constants'
+import { ENV } from '@/lib/env/constants'
 import { HiTerminal } from 'react-icons/hi'
 import { Suspense } from 'react'
 import { generateSEO } from '@/lib/generateSEO'

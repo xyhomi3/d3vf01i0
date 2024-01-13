@@ -3,7 +3,7 @@ import './globals.css'
 import { NavbarMobile, NavbarProvider } from '@/components/organisms/layouts/navbar/navbar-mobile'
 
 import { Analytics } from '@vercel/analytics/react';
-import { ENV } from '@/lib/constants'
+import { ENV } from '@/lib/env/constants'
 import { Footer } from '@/components/organisms/layouts/footer/footer'
 import { GeistMono } from 'geist/font/mono'
 import { GeistSans } from 'geist/font/sans'

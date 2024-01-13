@@ -1,4 +1,4 @@
-import { ENV } from '@/lib/constants'
+import { ENV } from '@/lib/env/constants'
 import { ImageResponse } from '@vercel/og'
 import { NextRequest } from 'next/server'
 

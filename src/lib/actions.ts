@@ -2,9 +2,9 @@
 
 import * as Wakatime from '@/types/wakatimeResponse'
 
-import { ENV } from './constants'
+import { ENV } from './env/constants'
 import { auth } from './auth'
-import { db } from './prisma'
+import { db } from './db/prisma'
 import { revalidatePath } from 'next/cache'
 
 export const createPost = async (formData: FormData) => {

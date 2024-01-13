@@ -45,7 +45,7 @@ export const ProjectCard = ({ data }: { data: Projects }) => {
               {data.tag && (
                 <li className='space-x-1'>
                   {data.tag.map((tech, i) => (
-                    <Badge className='bg-gradient-to-r via-[#00bef0] to-[#c7f284] from-primary bg-clip-text text-transparent' key={i}>{tech}</Badge>
+                    <Badge className='bg-gradient-to-r to-[#00bef0] from-primary bg-clip-text text-transparent' key={i}>{tech}</Badge>
                   ))}
                 </li>
               )}

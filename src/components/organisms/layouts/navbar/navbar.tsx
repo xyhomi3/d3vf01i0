@@ -16,6 +16,7 @@ export const Navbar = () => {
             </NavLink>
           ))}
         </ul>
+
         <NavbarMobileBtn />
       </div>
     </nav>

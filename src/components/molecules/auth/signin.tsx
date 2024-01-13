@@ -9,17 +9,17 @@ import {
 import { LoginForm } from "./login-form";
 import { useRouter } from "next/navigation";
 
-interface LoginButtonProps {
+interface SignInButtonProps {
   children: React.ReactNode;
   mode?: "modal" | "redirect",
   asChild?: boolean;
 };
 
-export const LoginButton = ({
+export const SignIn = ({
   children,
   mode = "redirect",
   asChild
-}: LoginButtonProps) => {
+}: SignInButtonProps) => {
   const router = useRouter();
 
   const onClick = () => {

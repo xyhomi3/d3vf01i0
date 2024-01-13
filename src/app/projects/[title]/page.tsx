@@ -1,4 +1,4 @@
-import { ENV } from '@/lib/constants'
+import { ENV } from '@/lib/env/constants'
 import { MDXComponent } from '@/components/molecules/mdx-component'
 import { allProjects } from 'contentlayer/generated'
 import { generateSEO } from '@/lib/generateSEO'
