@@ -2,7 +2,7 @@ import './globals.css'
 
 import { NavbarMobile, NavbarProvider } from '@/components/organisms/layouts/navbar/navbar-mobile'
 
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from '@vercel/analytics/react'
 import { ENV } from '@/lib/env/constants'
 import { Footer } from '@/components/organisms/layouts/footer/footer'
 import { GeistMono } from 'geist/font/mono'
@@ -89,7 +89,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Footer />
           </main>
         </ThemeWrapper>
-        {process.env.NODE_ENV === 'production' && <SpeedInsights /> && <Analytics/>}
+        {process.env.NODE_ENV === 'production' && <SpeedInsights /> && <Analytics />}
       </body>
       <ResponsiveIndicator />
     </html>

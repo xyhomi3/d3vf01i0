@@ -22,7 +22,7 @@ export default async function GuestBooks() {
     <FadeIn className='p-5 space-y-2'>
       <form action={createPost} className='col-span-full flex items-center justify-between gap-x-2.5'>
         <div className='flex-1 relative'>
-          <Input name='desc' id='desc' placeholder='Your Message...' aria-labelledby='desc' />
+          <Input name='desc' id='desc' placeholder='Your Message...' aria-labelledby='desc' inputMode='text' />
         </div>
         {session?.user && <SendPost/>}
         <UserAvatar/>
@@ -30,7 +30,7 @@ export default async function GuestBooks() {
       <article className='divide-y lg:divide-y-0 p-1'>
         {posts.map((item, i) => (
           <pre className='flex lg:flex-row flex-col items-start gap-x-2 py-2 lg:py-3 md:!text-sm text-xs' key={i}>
-            <code color='red' className='text-muted-foreground lg:w-36 truncate shrink-0 flex items-center justify-between w-full gap-x-2 font-bold'>
+            <code color='red' className='text-muted-foreground lg:w-36 truncate shrink-0 flex items-center justify-between w-full gap-x-2 font-semibold'>
               <code className='transition-colors bg-gradient-to-r to-[#00bef0] from-primary bg-clip-text text-transparent'>{item.user.name}</code>
 
               <code className='text-muted-foreground shrink-0 flex items-center justify-center gap-x-2 lg:hidden'>

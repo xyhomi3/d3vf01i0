@@ -7,14 +7,7 @@ import { SignIn } from './signin'
 import { SignOut } from './signout'
 import { auth } from '@/lib/auth'
 
-const messages = [
-  'Yo!',
-  'Hey!',
-  'Sup?',
-  'Hi',
-  'Hello',
-  'Welcome',
-]
+const messages = ['Yo!', 'Hey!', 'Sup?', 'Hi', 'Hello', 'Welcome']
 
 export default async function UserAvatar() {
   const randomMessage = messages[Math.floor(Math.random() * messages.length)]
@@ -38,18 +31,19 @@ export default async function UserAvatar() {
           </Avatar>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className='w-56' align='end' forceMount>
-        <DropdownMenuLabel className='font-normal'>
-          <div className='flex flex-col space-y-2 pb-3'>
+      <DropdownMenuContent className='flex flex-col p-3 gap-3' align='end' forceMount>
+        <DropdownMenuLabel className='font-normal p-0'>
+          <div className='flex flex-col space-y-2 w-full'>
             <p className='text-sm font-medium leading-0 bg-gradient-to-r to-[#00bef0] from-primary bg-clip-text text-transparent'>
               {randomMessage} {session.user.name}
             </p>
-            <p className='text-xs leading-none text-muted-foreground'>{session.user.email}</p>
+            <code className='text-xs leading-none text-muted-foreground text-center border p-3 rounded-md bg-muted'>
+              <span className='animate-pulse font-bol bg-gradient-to-r to-[#00bef0] from-primary bg-clip-text text-transparent'>{'>_ '}</span> happy Coding !
+            </code>
           </div>
         </DropdownMenuLabel>
-        <DropdownMenuItem>
-          <SignOut />
-        </DropdownMenuItem>
+
+        <SignOut />
       </DropdownMenuContent>
     </DropdownMenu>
   )

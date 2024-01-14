@@ -1,4 +1,5 @@
 import { Button } from "@/components/atoms/button"
+import { LogOut } from "lucide-react"
 import { signOut } from "@/lib/auth"
 
 export function SignOut(props: React.ComponentPropsWithRef<typeof Button>) {
@@ -10,8 +11,8 @@ export function SignOut(props: React.ComponentPropsWithRef<typeof Button>) {
       }}
       className="w-full"
     >
-      <Button variant="ghost" className="w-full p-0" {...props}>
-        Sign Out
+      <Button className="flex gap-3 w-full" {...props}>
+        <span>Sign Out</span> <LogOut size={20}/>
       </Button>
     </form>
   )
