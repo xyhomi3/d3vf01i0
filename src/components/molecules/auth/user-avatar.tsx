@@ -34,8 +34,8 @@ export default async function UserAvatar() {
       <DropdownMenuContent className='flex flex-col p-3 gap-3' align='end' forceMount>
         <DropdownMenuLabel className='font-normal p-0'>
           <div className='flex flex-col space-y-2 w-full'>
-            <p className='text-sm font-medium leading-0 bg-gradient-to-r to-[#00bef0] from-primary bg-clip-text text-transparent'>
-              {randomMessage} {session.user.name}
+            <p className='text-sm font-medium leading-0 bg-gradient-to-r to-[#00bef0] from-primary bg-clip-text text-transparent text-center'>
+              {randomMessage} {session.user.name?.split(' ')[0]}
             </p>
             <code className='text-xs leading-none text-muted-foreground text-center border p-3 rounded-md bg-muted'>
               <span className='animate-pulse font-bol bg-gradient-to-r to-[#00bef0] from-primary bg-clip-text text-transparent'>{'>_ '}</span> happy Coding !
