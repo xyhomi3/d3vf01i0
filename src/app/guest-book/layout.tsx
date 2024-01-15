@@ -70,7 +70,7 @@ const data = [
       },
       {
         title: 'Twitter',
-        href: 'https://www.instagram.com/xyhomi3/',
+        href: 'https://twitter.com/xyhomi3',
         icon: <SiX className='w-4 h-4' />
       }
     ]

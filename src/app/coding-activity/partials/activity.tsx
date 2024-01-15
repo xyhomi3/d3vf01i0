@@ -15,7 +15,8 @@ export const Activity = async () => {
         </div>
         {data.reverse().map(item => (
           <pre className='flex items-center justify-between' key={item.range.date}>
-            <code className='text-muted-foreground w-40 truncate shrink-0 !text-sm'>{item.range.text}</code>
+            <code className='text-muted-foreground w-40 truncate md:shrink-0 !text-sm'>{item.range.text}</code>
+
             <div className='w-full h-1 bg-muted rounded md:block hidden'>
               <div
                 className='h-1 bg-foreground rounded'
@@ -24,7 +25,8 @@ export const Activity = async () => {
                 }}
               />
             </div>
-            <code className='w-32 text-end text-muted-foreground ml-4 md:ml-0 shrink-0 !text-sm'>{item.grand_total.text}</code>
+
+            <code className='w-32 text-end text-secondary-foreground ml-1 md:ml-0 md:shrink-0 !text-sm '>{item.grand_total.text}</code>
           </pre>
         ))}
       </article>

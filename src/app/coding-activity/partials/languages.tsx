@@ -14,7 +14,7 @@ export const Languages = async () => {
         </div>
         {data.map(item => (
           <pre className='flex items-center justify-between' key={item.name}>
-            <code className='text-muted-foreground w-40 truncate shrink-0 flex items-center gap-x-2 !text-sm'>
+            <code className='text-muted-foreground w-40 truncate md:shrink-0 flex items-center gap-x-2 !text-sm'>
               <div
                 className='w-1 h-1 rounded-full'
                 style={{
@@ -31,7 +31,7 @@ export const Languages = async () => {
                 }}
               />
             </div>
-            <code className='w-24 text-end text-muted-foreground shrink-0 !text-sm'>{item.percent}%</code>
+            <code className='w-24 text-end text-muted-foreground md:shrink-0 !text-sm'>{item.percent}%</code>
           </pre>
         ))}
       </article>
