@@ -44,7 +44,7 @@
     "clsx": "^2.0.0",
     "contentlayer": "^0.3.4",
     "framer-motion": "^10.17.9",
-    "geist": "^1.2.0",
+    "geist": "^1.2.1",
     "lucide-react": "^0.307.0",
     "next": "^14.0.4",
     "next-auth": "^5.0.0-beta.4",
