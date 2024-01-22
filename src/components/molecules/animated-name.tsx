@@ -2,13 +2,12 @@
 
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 
-const letters = 'ABCD3FGHIJK1MNOPQRSTUVWXYZ'
+const letters = 'abCd3fghijk1mnopqrstuvwxyz'
 
 export const AnimatedName = () => {
-  const [text, setText] = useState('1UCi3N 1OUA')
+  const [text, setText] = useState('Cr3ativ3')
   const [intervalId] = useState<number | null>(null)
   const [isAnimating, setIsAnimating] = useState(false)
-
   const ref = useRef<HTMLHeadingElement | null>(null)
 
   const handleMouseOver = useCallback(() => {
@@ -60,7 +59,7 @@ export const AnimatedName = () => {
   }, [handleMouseOver, ref])
 
   return (
-    <h1 ref={ref} className='md:text-6xl sm:text-4xl text-3xl font-medium bg-gradient-to-r via-[#00bef0] to-[#c7f284] from-primary bg-clip-text text-transparent'>
+    <h1 ref={ref} className='md:text-6xl sm:text-4xl text-3xl font-medium'>
       {text}
     </h1>
   )

@@ -31,7 +31,7 @@ export default async function GuestBooks() {
         {posts.map((item, i) => (
           <pre className='flex lg:flex-row flex-col items-start gap-x-2 py-2 lg:py-3 md:!text-sm text-xs' key={i}>
             <code color='red' className='text-muted-foreground lg:w-auto truncate shrink-0 flex items-center justify-between w-full gap-x-2'>
-              <code className='transition-colors bg-gradient-to-r to-[#00bef0] from-primary bg-clip-text text-transparent font-semibold'>{item.user.name.split(' ')[0]}</code>
+              <code className='transition-colors bg-gradient-to-r bg-clip-text text-transparent from-cyan-700 to-lime-600 dark:bg-gradient-to-r dark:from-cyan-500 dark:to-lime-400 font-semibold'>{item.user.name.split(' ')[0]}</code>
 
               <code className='text-muted-foreground flex items-center justify-center lg:hidden sm:text-sm'>
                 {session?.user?.id === item.user.id && <RemovePost id={item.id} />}

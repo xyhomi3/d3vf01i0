@@ -4,9 +4,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { AnimatePresence, FadeIn } from '@/components/atoms/fade-in'
 import { Fragment, createContext, useContext, useState } from 'react'
 import { Menu, X } from 'lucide-react'
-
 import Link from 'next/link'
-import { ThemeToggle } from '../../../molecules/theme/theme-toggler'
+import { getNavMenu } from './nav-menu'
 
 interface NavbarMobileContextProps {
   isOpen: boolean
@@ -47,7 +46,7 @@ export const NavbarMobileBtn: React.FC = () => {
 
 export const NavbarMobile = () => {
   const { isOpen, toggleNavbar } = useNavbarMobile()
-
+  const navMenu = getNavMenu()
   return (
     <AnimatePresence>
       {isOpen && (
@@ -81,86 +80,3 @@ export const NavbarMobile = () => {
     </AnimatePresence>
   )
 }
-
-export const navMenu = [
-  {
-    name: '_h0m3',
-    path: '/'
-  },
-  {
-    name: '_ab0ut-m3',
-    child: [
-      {
-        name: 'personal.ts',
-        path: '/about/personal.ts'
-      },
-      {
-        name: 'work.ts',
-        path: '/about/work.ts'
-      },
-      {
-        name: 'gear.ts',
-        path: '/about/gear.ts'
-      }
-    ]
-  },
-  {
-    name: '_pr0j3cts',
-    child: [
-      {
-        name: 'All Projects',
-        path: '/projects'
-      },
-      {
-        name: 'React',
-        path: '/projects?tag=react'
-      },
-      {
-        name: 'Next',
-        path: '/projects?tag=next'
-      },
-      {
-        name: 'HTML',
-        path: '/projects?tag=html'
-      }
-    ]
-  },
-  {
-    name: '_guest-book',
-    path: '/guest-book'
-  },
-  {
-    name: '_articles',
-    path: '/articles'
-  },
-  {
-    name: '_coding-activity',
-    child: [
-      {
-        name: 'Weekly',
-        path: '/coding-activity'
-      },
-      {
-        name: 'Languages',
-        path: '/coding-activity/languages'
-      }
-    ]
-  },
-  {
-    name: '_contact',
-    child: [
-      {
-        name: 'Email',
-        path: 'mailto:loua@0000.codes'
-      },
-      {
-        name: 'LinkedIn',
-        path: 'https://www.linkedin.com/in/lucien-loua/'
-      },
-      {
-        name: 'X',
-        path: 'https://www.x.com/xyhomi3/'
-      }
-    ]
-  }
-]

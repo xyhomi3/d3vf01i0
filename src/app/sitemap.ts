@@ -1,7 +1,7 @@
 import { ENV } from '@/lib/env/constants'
 import { MetadataRoute } from 'next'
 import { allAbouts } from 'contentlayer/generated'
-import { allActivity } from './coding-activity/allActivities'
+import { allActivity } from '@/app/[locale]/coding-activity/allActivities'
 import { allArticles } from 'contentlayer/generated'
 import { allProjects } from 'contentlayer/generated'
 

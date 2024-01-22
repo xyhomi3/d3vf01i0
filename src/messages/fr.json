@@ -1,0 +1,47 @@
+{
+  "Home": {
+    "job": "Développeur Ux/Ui"
+  },
+  "Sounds": {
+    "soon": "R3st3z à l'affût",
+    "description": "Bientôt, vous pourrez écouter/acheter mes prods ici. En attendant, vous pouvez toujours me suivre sur IG & X."
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, fr {Français} en {Anglais} other {Inconnu}}"
+  },
+  "Navbar": {
+    "home": "_accu3il",
+    "about": "_m0i_<3",
+    "projects": "_pr0j3ts",
+    "guest-book": "_livr3_d_0r",
+    "articles": "_articl3s",
+    "sounds": "_s0ns",
+    "mobile":
+    {
+     "projects": "Tous mes projets",
+     "personal": "moi.ts",
+     "work": "compétences.ts",
+     "gear": "matériel.ts",
+     "coding-activity": "_statistiqu3s",
+     "weekly": "Hebdomadaires"
+    }
+  },
+  "Footer": {
+    "tooltip": "Aucun Problème",
+    "activity": "Activité quotidienne",
+    "status": "Dispobible",
+    "more": "cliquez pour en savoir plus",
+    "clock" : ">_ heure locale: ",
+    "time": "fr-FR"
+  },
+  "Theme": {
+    "light": "Clair",
+    "dark": "Sombre",
+    "system": "Système",
+    "alert": "Avertissement Flashbang",
+    "alert-message": "Êtes-vous absolument sûr de vouloir passer en mode clair et déclencher le flashbang ?",
+    "cancel": "Annuler",
+    "confirm": "Oui"
+  }
+}

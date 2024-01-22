@@ -1,8 +1,13 @@
+
 /**
  * @type {import('next').NextConfig}
  */
 
+
+
+
 const { withContentlayer } = require('next-contentlayer')
+const withNextIntl = require('next-intl/plugin')();
 const withPWA = require("next-pwa")({
   dest: ".next/public",
   register: true,
@@ -37,4 +42,4 @@ const nextConfig = withPWA(
   }
 )
 
-module.exports = withContentlayer(nextConfig)
+module.exports = withNextIntl(withContentlayer(nextConfig));

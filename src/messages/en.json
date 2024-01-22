@@ -1,0 +1,46 @@
+{
+  "Home": {
+    "job": "Ux/Ui developer"
+  },
+  "Sounds": {
+    "soon": "Stay tun3d",
+    "description": "Soon, you'll be able to listen/purchase my prods here. In the meantime, you can always follow me on IG & X."
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, fr {French} en {English} other {Unknown}}"
+  },
+  "Navbar": {
+    "home": "_h0m3",
+    "about": "_ab0ut_m3",
+    "projects": "_pr0j3cts",
+    "guest-book": "_gu3st_b00k",
+    "articles": "_articl3s",
+    "sounds": "_s0unds",
+    "mobile": {
+      "projects": "Tous mes projets",
+      "personal": "personal.ts",
+      "work": "work.ts",
+      "gear": "gear.ts",
+      "coding-activity": "_c0ding_activity",
+      "weekly": "Weekly"
+    }
+  },
+  "Footer": {
+    "tooltip": "No Problems",
+    "activity": "Daily activity",
+    "status": "Available for a work!",
+    "more": "click for more",
+    "clock": ">_ local time: ",
+    "time": "en-US"
+  },
+  "Theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "alert": "Flashbang Disclaimer",
+    "alert-message": "Are you absolutely sure you want to switch to the light mode and unleash the flashbang?",
+    "cancel": "Cancel",
+    "confirm": "Yes"
+  }
+}

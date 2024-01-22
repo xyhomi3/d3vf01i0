@@ -8,7 +8,7 @@ export async function GET(req: NextRequest) {
   const { searchParams } = req.nextUrl
   const postTitle = searchParams.get('title')
 
-  const font = fetch(new URL('../../../../public/fonts/outfit-semibold.ttf', import.meta.url)).then(res => res.arrayBuffer())
+  const font = fetch(new URL('/public/fonts/outfit-semibold.ttf', import.meta.url)).then(res => res.arrayBuffer())
   const fontData = await font
 
   return new ImageResponse(

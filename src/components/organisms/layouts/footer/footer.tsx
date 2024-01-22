@@ -3,15 +3,18 @@ import { IoLogoGithub, IoWarningOutline } from 'react-icons/io5'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/atoms/tooltip'
 
 import { AiOutlineClockCircle } from 'react-icons/ai'
+import LanguageSelector from '@/components/molecules/lang/LocaleSelector'
 import Link from 'next/link'
 import LocalTime from './local-time'
-import { ThemeToggle } from '../../../molecules/theme/theme-toggler'
+import LocaleSwitcher from '@/components/molecules/lang/LocaleSwitcher'
+import { ThemeToggle } from '@/components/molecules/theme/theme-toggler'
+import { getTranslations } from 'next-intl/server'
 import { weeklyCodingActivity } from '@/lib/actions'
 
 export const Footer = async () => {
   const { data } = await weeklyCodingActivity()
   const todayData = data[data.length - 1]
-
+  const t = await getTranslations()
   return (
     <footer className='border-t text-off-white text-xs flex items-center justify-between select-none bg-layout relative z-50'>
       <div className='flex items-center border-r divide-x'>
@@ -26,6 +29,10 @@ export const Footer = async () => {
         <div aria-label='theme-toogler' className='items-center group hover:text-foreground text-muted-foreground transition-colors' data-umami-event='footer-refresh-btn'>
           <ThemeToggle />
         </div>
+        <div aria-label='theme-toogler' className='items-center group text-muted-foreground transition-colors hover:text-foreground' data-umami-event='footer-refresh-btn'>
+        {/* <LocaleSwitcher/> */}
+      <LanguageSelector/>
+        </div>
 
         <TooltipProvider>
           <Tooltip>
@@ -37,7 +44,7 @@ export const Footer = async () => {
                 <p>0</p>
               </div>
             </TooltipTrigger>
-            <TooltipContent>No problems</TooltipContent>
+            <TooltipContent>{t('Footer.tooltip')}</TooltipContent>
           </Tooltip>
         </TooltipProvider>
         <TooltipProvider>
@@ -53,8 +60,8 @@ export const Footer = async () => {
               </Link>
             </TooltipTrigger>
             <TooltipContent>
-              <p>Today coding activity</p>
-              <p className='text-sm text-muted-foreground'>click for more</p>
+              <p>{t('Footer.activity')}</p>
+              <p className='text-sm text-muted-foreground'>{t('Footer.more')}</p>
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
@@ -64,7 +71,7 @@ export const Footer = async () => {
           className='items-center gap-x-1.5 px-2 py-1 h-7 lg:flex hidden text-muted-foreground hover:text-foreground transition-colors'
         >
           <div className='w-2 h-2 bg-green-500 rounded-full animate-pulse' />
-          <span>Available for a work!</span>
+          <span>{t('Footer.status')}</span>
         </Link>
       </div>
 

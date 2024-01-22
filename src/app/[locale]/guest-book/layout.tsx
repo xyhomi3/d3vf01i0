@@ -1,6 +1,6 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/atoms/accordion'
 import { FadeIn, FadeInStagger } from '@/components/atoms/fade-in'
-import { SiLinkedin, SiMailgun, SiX } from 'react-icons/si'
+import { SiGmail, SiLinkedin, SiThreads, SiX } from 'react-icons/si'
 
 import { AsideLink } from '@/components/atoms/aside-link'
 import { ENV } from '@/lib/env/constants'
@@ -61,7 +61,7 @@ const data = [
       {
         title: 'Email',
         href: 'mailto:loua@0000.codes',
-        icon: <SiMailgun className='w-4 h-4' />
+        icon: <SiGmail className='w-4 h-4' />
       },
       {
         title: 'LinkedIn',
@@ -72,6 +72,11 @@ const data = [
         title: 'Twitter',
         href: 'https://twitter.com/xyhomi3',
         icon: <SiX className='w-4 h-4' />
+      },
+      {
+        title: 'Thread',
+        href: 'https://www.threads.net/@xyhomi3',
+        icon: <SiThreads className='w-4 h-4' />
       }
     ]
   }

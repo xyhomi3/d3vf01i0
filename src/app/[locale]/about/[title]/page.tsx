@@ -3,9 +3,8 @@ import { MDXComponent } from '@/components/molecules/mdx-component'
 import { allAbouts } from 'contentlayer/generated'
 import { generateSEO } from '@/lib/generateSEO'
 import { notFound } from 'next/navigation'
-
 type ParamsProps = {
-  title: string
+  title: string,
 }
 
 async function getContent(params: ParamsProps) {
@@ -33,7 +32,7 @@ export async function generateStaticParams() {
   }))
 }
 
-export default async function Page({ params }: { params: ParamsProps }) {
+export default async function Page({ params }: { params: ParamsProps } ) {
   const content = await getContent(params)
   if (!content) return notFound()
 

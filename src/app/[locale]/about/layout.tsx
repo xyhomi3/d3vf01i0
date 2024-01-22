@@ -1,10 +1,10 @@
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/atoms/accordion'
+import { FadeIn, FadeInStagger } from '@/components/atoms/fade-in'
+
+import { AsideLink } from '@/components/atoms/aside-link'
+import { SiTypescript } from 'react-icons/si'
 import { Suspense } from 'react'
 import { allAbouts } from 'contentlayer/generated'
-import { SiTypescript } from 'react-icons/si'
-
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/atoms/accordion'
-import { AsideLink } from '@/components/atoms/aside-link'
-import { FadeInStagger, FadeIn } from '@/components/atoms/fade-in'
 
 export default function AboutLayout({ children }: { children: React.ReactNode }) {
   return (

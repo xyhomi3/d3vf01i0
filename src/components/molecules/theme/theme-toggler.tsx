@@ -18,6 +18,7 @@ import { Moon, Sun, SunMoon } from 'lucide-react'
 
 import { Button } from '@/components/atoms/button'
 import { useTheme } from 'next-themes'
+import { useTranslations } from 'next-intl'
 
 export function ThemeToggle() {
   const { setTheme } = useTheme()
@@ -25,37 +26,33 @@ export function ThemeToggle() {
 
   const openAlertDialog = () => setIsAlertDialogOpen(true)
   const closeAlertDialog = () => setIsAlertDialogOpen(false)
-
+  const t = useTranslations('Theme')
   const switchToLightMode = () => {
     setTheme('light')
     closeAlertDialog()
   }
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button
-          size='icon'
-          variant='outline'
-          className='focus-visible:ring-0 h-7 border-none hover:bg-transparent rounded-none flex shrink-0'
-          data-umami-event='theme-toggle'
-        >
+      <DropdownMenuTrigger className='focus-visible:ring-0 h-7 w-7 items-center justify-center border-none focus:ring-0 focus:outline-none hover:bg-transparent rounded-none flex shrink-0'
+>
+
           <Moon size={15} className='rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0' />
           <Sun size={15} className='absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100' />
           <span className='sr-only'>Toggle theme</span>
-        </Button>
+
       </DropdownMenuTrigger>
       <DropdownMenuContent align='end'>
         <DropdownMenuItem data-umami-event='theme-toggle-light' onClick={openAlertDialog}>
           <Sun size={15} />
-          <span className='pl-3'>Light</span>
+          <span className='pl-3'>{t('light')}</span>
         </DropdownMenuItem>
         <DropdownMenuItem data-umami-event='theme-toggle-dark' onClick={() => setTheme('dark')}>
           <Moon size={15} />
-          <span className='pl-3'>Dark</span>
+          <span className='pl-3'>{t('dark')}</span>
         </DropdownMenuItem>
         <DropdownMenuItem data-umami-event='theme-toggle-system' onClick={() => setTheme('system')}>
           <SunMoon size={15} />
-          <span className='pl-3'>System</span>
+          <span className='pl-3'>{t('system')}</span>
         </DropdownMenuItem>
       </DropdownMenuContent>
 
@@ -63,12 +60,12 @@ export function ThemeToggle() {
         <AlertDialogTrigger className='hidden rounded-md'>
           <AlertDialogContent>
             <AlertDialogHeader>
-              <AlertDialogTitle>💥 Flashbang Disclaimer</AlertDialogTitle>
-              <AlertDialogDescription>Are you absolutely sure you want to switch to the light mode and unleash the flashbang?</AlertDialogDescription>
+              <AlertDialogTitle>💥 {t('alert')}</AlertDialogTitle>
+              <AlertDialogDescription>{t('alert-message')}</AlertDialogDescription>
             </AlertDialogHeader>
             <AlertDialogFooter>
-              <AlertDialogCancel>Cancel</AlertDialogCancel>
-              <AlertDialogAction onClick={switchToLightMode}>Continue</AlertDialogAction>
+              <AlertDialogCancel>{t("cancel")}</AlertDialogCancel>
+              <AlertDialogAction onClick={switchToLightMode}>{t("confirm")}</AlertDialogAction>
             </AlertDialogFooter>
           </AlertDialogContent>
         </AlertDialogTrigger>
