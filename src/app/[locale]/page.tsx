@@ -1,11 +1,12 @@
-import { AnimatedName } from '@/components/molecules/animated-name'
 import { Badge } from '@/components/atoms/badge'
 import { FadeIn } from '@/components/atoms/fade-in'
-import { GridPattern } from '@/components/atoms/grid-pattern'
+import { AnimatedName } from '@/components/molecules/animated-name'
 import { useTranslations } from 'next-intl'
+import { unstable_setRequestLocale } from 'next-intl/server'
 
 // export default function Home() {
-  export default function Home() {
+  export default function Home({ params: { locale } }: { params: { locale: string } }) {
+    unstable_setRequestLocale(locale)
 
   const t =  useTranslations('Home')
 
@@ -15,7 +16,6 @@ import { useTranslations } from 'next-intl'
       <FadeIn>
         <div className='md:space-y-10 space-y-8 relative z-10'>
           <header>
-            
             <AnimatedName/>
             <h2 className='text-muted-foreground md:text-2xl sm:text-xl text-base align-middle items-center'>
               {/* <span className='animate-pulse'>&gt;_ </span> */}
