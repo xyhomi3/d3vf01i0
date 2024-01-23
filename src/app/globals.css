@@ -58,6 +58,8 @@
     @apply flex items-center justify-center h-dvh w-full overflow-hidden;
   }
 
+
+
   main {
     @apply md:h-[calc(100dvh-10%)] md:w-[calc(100dvw-5%)] h-[calc(100dvh-4%)] w-[calc(100dvw-5%)] bg-background backdrop-blur rounded-lg overflow-hidden border flex flex-col relative z-50 transition-all;
   }
@@ -112,4 +114,17 @@
   [data-radix-popper-content-wrapper] {
     border: 0;
   }
+}
+
+/* @keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} */
+
+canvas {
+  touch-action: none;
 }

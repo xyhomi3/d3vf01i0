@@ -106,6 +106,7 @@ export default async function LocaleLayout({ children, params: { locale } }: { c
             </NextIntlProvider>
           </main>
         </ThemeWrapper>
+
         {process.env.NODE_ENV === 'production' && <SpeedInsights /> && <Analytics />}
       </body>
       {/* <ResponsiveIndicator /> */}

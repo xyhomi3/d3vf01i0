@@ -15,8 +15,8 @@ export const Footer = async () => {
   const todayData = data[data.length - 1]
   const t = await getTranslations()
   return (
-    <footer className='border-t text-off-white text-xs flex items-center justify-between select-none bg-layout relative z-50'>
-      <div className='flex items-center border-r divide-x'>
+    <footer className='border-t text-off-white text-xs flex items-center justify-between select-none bg-layout relative z-50 backdrop-filter backdrop-blur-sm bg-opacity-50'>
+    <div className='flex items-center border-r divide-x'>
         <Link
           target='_blank'
           href='https://github.com/xyhomi3/d3vf01i0'

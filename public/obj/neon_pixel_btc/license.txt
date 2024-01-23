@@ -1,0 +1,11 @@
+Model Information:
+* title:	neon pixel btc
+* source:	https://sketchfab.com/3d-models/neon-pixel-btc-38211086bee84aa9bcadc2b516498ab3
+* author:	alina_dreiman (https://sketchfab.com/alina_dreiman)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "neon pixel btc" (https://sketchfab.com/3d-models/neon-pixel-btc-38211086bee84aa9bcadc2b516498ab3) by alina_dreiman (https://sketchfab.com/alina_dreiman) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
