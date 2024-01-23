@@ -38,7 +38,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".contentlayer/generated",
-    "src/components/molecules/canvas/computers/spin-src/components/molecules/canvas/computers/computer.jsomputer.js"  ],
+    "src/components/molecules/canvas/monitors/spin-src/components/molecules/canvas/computers/computer.jsomputer.js"  ],
   "exclude": [
     "node_modules"
   ]

@@ -33,13 +33,10 @@ export function ThemeToggle() {
   }
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className='focus-visible:ring-0 h-7 w-7 items-center justify-center border-none focus:ring-0 focus:outline-none hover:bg-transparent rounded-none flex shrink-0'
->
-
-          <Moon size={15} className='rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0' />
-          <Sun size={15} className='absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100' />
-          <span className='sr-only'>Toggle theme</span>
-
+      <DropdownMenuTrigger className='focus-visible:ring-0 h-7 w-7 items-center justify-center border-none focus:ring-0 focus:outline-none hover:bg-transparent rounded-none flex shrink-0'>
+        <Moon size={15} className='rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0' />
+        <Sun size={15} className='absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100' />
+        <span className='sr-only'>Toggle theme</span>
       </DropdownMenuTrigger>
       <DropdownMenuContent align='end'>
         <DropdownMenuItem data-umami-event='theme-toggle-light' onClick={openAlertDialog}>
@@ -64,8 +61,8 @@ export function ThemeToggle() {
               <AlertDialogDescription>{t('alert-message')}</AlertDialogDescription>
             </AlertDialogHeader>
             <AlertDialogFooter>
-              <AlertDialogCancel>{t("cancel")}</AlertDialogCancel>
-              <AlertDialogAction onClick={switchToLightMode}>{t("confirm")}</AlertDialogAction>
+              <AlertDialogCancel>{t('cancel')}</AlertDialogCancel>
+              <AlertDialogAction onClick={switchToLightMode}>{t('confirm')}</AlertDialogAction>
             </AlertDialogFooter>
           </AlertDialogContent>
         </AlertDialogTrigger>

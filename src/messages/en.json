@@ -1,6 +1,7 @@
 {
   "Home": {
-    "job": "Ux/Ui developer"
+    "job": "Ux/Ui developer",
+    "greeting": "Hi, I'm"
   },
   "Sounds": {
     "soon": "Stay tun3d",
@@ -29,7 +30,11 @@
   "Footer": {
     "tooltip": "No Problems",
     "activity": "Daily activity",
-    "status": "Available for a work!",
+    "status": {
+      "state": "Busy - Occupied with tasks",
+      "title": "I'm engaged with tasks",
+      "description": "but may be available if urgent."
+    },
     "more": "click for more",
     "clock": ">_ local time: ",
     "time": "en-US"

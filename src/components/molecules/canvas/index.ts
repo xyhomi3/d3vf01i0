@@ -1,3 +1,5 @@
-import CodeRoom from "./computers/code";
+import CodeRoom from "./monitors/code-room";
 import StarsCanvas from "./space/stars";
-export { StarsCanvas , CodeRoom};
+
+export { CodeRoom, StarsCanvas };
+

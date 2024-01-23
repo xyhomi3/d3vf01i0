@@ -34,7 +34,7 @@ const LanguageSelector = () => {
           <span className='transition-colors'>beta</span>
         </Badge>
         <div className='flex flex-row gap-2 align-center items-center'>
-          <Languages size={20} className='text-slate-400 animate-pulse'/>
+          <Languages size={20} className='text-lime-400 animate-pulse'/>
           <SelectValue placeholder='Select a language' />
         </div>
       </SelectTrigger>

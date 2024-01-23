@@ -16,7 +16,7 @@ export const Footer = async () => {
   const t = await getTranslations()
   return (
     <footer className='border-t text-off-white text-xs flex items-center justify-between select-none bg-layout relative z-50 backdrop-filter backdrop-blur-sm bg-opacity-50'>
-    <div className='flex items-center border-r divide-x'>
+      <div className='flex items-center border-r divide-x'>
         <Link
           target='_blank'
           href='https://github.com/xyhomi3/d3vf01i0'
@@ -25,12 +25,11 @@ export const Footer = async () => {
           <BiGitBranch className='text-lg' />
           <p>main</p>
         </Link>
-        <div aria-label='theme-toogler' className='items-center group hover:text-foreground text-muted-foreground transition-colors' data-umami-event='footer-refresh-btn'>
+        <div aria-label='theme-toogler' className='items-center group hover:text-foreground text-muted-foreground transition-colors'>
           <ThemeToggle />
         </div>
-        <div aria-label='theme-toogler' className='items-center group text-muted-foreground transition-colors hover:text-foreground' data-umami-event='footer-refresh-btn'>
-        {/* <LocaleSwitcher/> */}
-      <LanguageSelector/>
+        <div aria-label='theme-toogler' className='items-center group text-muted-foreground transition-colors hover:text-foreground'>
+          <LanguageSelector />
         </div>
 
         <TooltipProvider>
@@ -64,19 +63,29 @@ export const Footer = async () => {
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
-        <Link
-          href='mailto:loua@0000.codes'
-          target='_blank'
-          className='items-center gap-x-1.5 px-2 py-1 h-7 lg:flex hidden text-muted-foreground hover:text-foreground transition-colors'
-        >
-          <div className='w-2 h-2 bg-green-500 rounded-full animate-pulse' />
-          <span>{t('Footer.status')}</span>
-        </Link>
+
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Link
+                href='mailto:loua@0000.codes'
+                target='_blank'
+                className='items-center gap-x-1.5 px-2 py-1 h-7 lg:flex hidden text-muted-foreground hover:text-foreground transition-colors'
+              >
+                <div className='w-2 h-2 bg-orange-500 rounded-full animate-pulse' />
+                <span>{t('Footer.status.state')}</span>
+              </Link>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>{t('Footer.status.title')}</p>
+              <p className='text-sm text-muted-foreground'>{t('Footer.status.description')}</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
       </div>
 
       <div className='flex items-center divide-x divide border-l'>
-
-        <LocalTime/>
+        <LocalTime />
         <Link target='_blank' href='https://github.com/xyhomi3' className='flex items-center gap-x-1 px-2 py-1 h-7 hover:text-foreground text-muted-foreground transition-colors'>
           <p>xyhomi3</p>
           <IoLogoGithub className='text-lg' />
