@@ -59,7 +59,7 @@ export const AnimatedName = () => {
   }, [handleMouseOver, ref])
 
   return (
-    <h1 ref={ref} className='p-1 md:text-6xl sm:text-4xl text-3xl font-bold transition-colors bg-gradient-to-r bg-clip-text text-transparent from-slate-300 to-lime-400 dark:bg-gradient-to-r dark:from-cyan-500 dark:to-lime-400'>
+    <h1 ref={ref} className='p-1 md:text-4xl sm:text-2xl text-xl font-bold transition-colors bg-gradient-to-r bg-clip-text text-transparent from-slate-300 to-lime-400 dark:bg-gradient-to-r dark:from-cyan-500 dark:to-lime-400'>
         {text}
     </h1>
   )

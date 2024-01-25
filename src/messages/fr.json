@@ -1,10 +1,10 @@
 {
   "Home": {
     "job": "Développeur Ux/Ui",
-    "greeting": "Salut, je suis"
+    "greeting": "Salut, je suis",
+    "loading": "Chargement..."
   },
   "Sounds": {
-    "soon": "R3st3z à l'affût",
     "description": "Bientôt, vous pourrez écouter/acheter mes prods ici. En attendant, vous pouvez toujours me suivre sur IG & X."
   },
   "LocaleSwitcher": {
@@ -32,7 +32,7 @@
     "tooltip": "Aucun Problème",
     "activity": "Activité quotidienne",
     "status": {
-      "state": "Occupé - En train de travailler sur des tâches",
+      "state": "Occupé",
       "title": "Je travaille sur des tâches en ce moment",
       "description": "mais je pourrais être disponible en cas d'urgence."
     },

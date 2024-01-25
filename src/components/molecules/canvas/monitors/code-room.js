@@ -15,7 +15,8 @@ export default function CodeRoom() {
   const spotlight = theme === 'dark' ? 1000 : 3000
 
   return (
-    <Canvas shadows dpr={[1, 1.5]} camera={{ position: [-1.5, 1, 5.5], fov: 45, near: 1, far: 20 }}>
+    <Canvas shadows dpr={[1, 2]} camera={{ position: [-1.5, 1, 5.5], fov: 45, near: 1, far: 20 }}>
+      
       {/* Lights */}
       <color attach='background' args={[color]} />
       <hemisphereLight intensity={intensity} groundColor={color} />
@@ -24,7 +25,7 @@ export default function CodeRoom() {
       <group position={[-0, -1, 0]}>
         {/* Auto-instanced sketchfab model */}
         <Instances>
-          <Computers scale={0.7} />
+          <Computers scale={0.75} />
         </Instances>
         {/* Plane reflections + distance blur */}
         <mesh receiveShadow rotation={[-Math.PI / 2, 0, 0]}>
@@ -47,12 +48,11 @@ export default function CodeRoom() {
       </group>
       {/* Postprocessing */}
       <EffectComposer disableNormalPass>
-        <Bloom luminanceThreshold={0} mipmapBlur luminanceSmoothing={0.3} intensity={1.5} />
-        <DepthOfField target={[0, 0, 13]} focalLength={0.3} bokehScale={15} height={1024} />
+        <Bloom luminanceThreshold={0} mipmapBlur luminanceSmoothing={0.3} intensity={1.3} />
+        <DepthOfField target={[0, 0, 13]} focalLength={0.3} bokehScale={15} height={512} />
       </EffectComposer>
       {/* Camera movements */}
       <CameraRig />
-      {/* <DarkModeAdjuster meshRef={meshRef} /> */}
       {/* Small helper that freezes the shadows for better performance */}
       <BakeShadows />
     </Canvas>

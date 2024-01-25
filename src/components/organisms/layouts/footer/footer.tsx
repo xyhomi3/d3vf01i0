@@ -28,9 +28,7 @@ export const Footer = async () => {
         <div aria-label='theme-toogler' className='items-center group hover:text-foreground text-muted-foreground transition-colors'>
           <ThemeToggle />
         </div>
-        <div aria-label='theme-toogler' className='items-center group text-muted-foreground transition-colors hover:text-foreground'>
-          <LanguageSelector />
-        </div>
+
 
         <TooltipProvider>
           <Tooltip>
@@ -86,6 +84,9 @@ export const Footer = async () => {
 
       <div className='flex items-center divide-x divide border-l'>
         <LocalTime />
+        <div aria-label='theme-toogler' className='items-center group text-muted-foreground transition-colors hover:text-foreground'>
+          <LanguageSelector />
+        </div>
         <Link target='_blank' href='https://github.com/xyhomi3' className='flex items-center gap-x-1 px-2 py-1 h-7 hover:text-foreground text-muted-foreground transition-colors'>
           <p>xyhomi3</p>
           <IoLogoGithub className='text-lg' />

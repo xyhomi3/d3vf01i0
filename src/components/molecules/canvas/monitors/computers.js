@@ -205,7 +205,7 @@ function ScreenText({ invert, x = 0, y = 1.2, ...props }) {
         font='/fonts/outfit-semibold.ttf'
         position={[x, y, 0]}
         ref={textRef}
-        fontSize={3}
+        fontSize={5}
         letterSpacing={-0.1}
         color={theme === 'dark' ? textColor : invert ? 'Black' : 'YellowGreen'}
       >
